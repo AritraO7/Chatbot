@@ -1,2 +1,9 @@
 pyjwt ~=2.8.0
 sqlalchemy
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic
+python-dotenv
+google-generativeai
