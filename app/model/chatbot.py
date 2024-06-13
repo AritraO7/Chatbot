@@ -22,9 +22,6 @@ async def chat(prompt: Prompt):
         if chat_client is None:
             raise HTTPException(status_code=500, detail="Chat client initialization failed")
         response = generation(prompt.user_prompt, chat_client)
-        # response = chat_client.send_message(
-        #     prompt.user_prompt, generation_config=param.GEN_PARAMETERS
-        # )
         return {"response": response.text if hasattr(response, "text") else str(response)}
 
     except Exception as e:
@@ -50,9 +47,6 @@ async def chat_with_pdf(prompt: Prompt):
             data=base64.b64decode(prompt.document)
         )
         response = generation_with_doc(context_part, prompt.user_prompt, chat_client)
-        # response = chat_client.send_message(
-        #     [context_part, prompt.user_prompt], generation_config=param.GEN_PARAMETERS
-        # )
         return {"response": response.text if hasattr(response, "text") else str(response)}
 
     except Exception as e:
