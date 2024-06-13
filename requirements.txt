@@ -1,9 +1,12 @@
 pyjwt ~=2.8.0
 sqlalchemy
-fastapi
-uvicorn
+fastapi~=0.109.2
+uvicorn~=0.23.2
 sqlalchemy
 psycopg2-binary
-pydantic
-python-dotenv
+pydantic~=2.7.0
+python-dotenv~=1.0.1
 google-generativeai
+
+vertexai~=1.49.0
+pytz~=2024.1

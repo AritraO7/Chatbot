@@ -16,8 +16,8 @@ app.add_middleware(
 app.include_router(chatbot, prefix="/generation", tags=["playground"])
 
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8000)
+if __name__ == '__main__':
+    uvicorn.run("main:app", host="localhost", port=8000, reload=True)
 
 
 
